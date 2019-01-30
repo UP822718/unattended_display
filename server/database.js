@@ -40,7 +40,7 @@ async function addImage(reqFile) {
   await rename(reqFile.path,"./static/content/"+reqFile.filename+".png");
   nextId += 1;
   let con = {"id":nextId,"url":"./static/content/"+reqFile.filename+".png","type":"image"};
-  contentList.push(item);
+  contentList.push(con);
   console.log(contentList);
 }
 
