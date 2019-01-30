@@ -2,7 +2,9 @@ let contentList = [];
 const { promisify } = require('util');
 const fs = require('fs');
 
-const renameAsync = promisify(fs.rename);
+
+
+const rename = promisify(fs.rename);
 let nextId = 7;
 contentList.push({"id":"6","url":"/content/The-Last-Jedi-Changes.jpeg","type":"image"});
 contentList.push({"id":"5","url":"/content/star-wars-movie-posters.jpg","type":"image"});
@@ -35,15 +37,7 @@ function getContentV2() {
 
 
 async function addImage(reqFile) {
-  const fileExt = reqFile.mimetype.split('/')[1] || 'png';
-  const newFilename = reqFile.filename + '.' + fileExt;
-  await renameAsync("./"+reqFile.path, "./static/content" + newFilename);
-  const item = {
-    id: nextId,
-    url: newFilename
-  };
-  contentList.push(item);
-  nextId =+1;
+  await rename(reqFile.path,"./static/content/"+reqFile.filename+".png")
 }
 
 function addVideo(url) {
