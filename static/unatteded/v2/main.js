@@ -15,9 +15,9 @@ async function reqListener() {
   console.log(c);
   let x = await c.json();
   let element = document.getElementsByClassName("content")[0];
-  //check if removed
+  /// what can i remove form the HTML and what can i Remove and what shuld Not ADD
   for (let child of element.childNodes) {
-    let remove = true;
+    let remove = true; // tracs if we conent in the html
     for (let index in x.content) {
       if (child.id === x.content[index].id) {
         x.content.splice(index, 1);

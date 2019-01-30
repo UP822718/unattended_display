@@ -37,14 +37,13 @@ function getContentV2() {
 async function addImage(reqFile) {
   const fileExt = reqFile.mimetype.split('/')[1] || 'png';
   const newFilename = reqFile.filename + '.' + fileExt;
-  await renameAsync(reqFile.path, "./static/content" + newFilename);
+  await renameAsync("./"+reqFile.path, "./static/content" + newFilename);
   const item = {
-    id: data.nextId,
+    id: nextId,
     url: newFilename
   };
   contentList.push(item);
   nextId =+1;
-
 }
 
 function addVideo(url) {
@@ -69,4 +68,4 @@ function getText() {
 
 
 
-module.exports={"getContentV2":getContentV2,"getContentV1":getContentV1,"addimage":addImage,"getText":getText,"setText":setText};
+module.exports={"addImage":addImage,"getContentV2":getContentV2,"getContentV1":getContentV1,"addimage":addImage,"getText":getText,"setText":setText};

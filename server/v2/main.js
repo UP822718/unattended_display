@@ -6,11 +6,13 @@ let upload = multer({ dest: 'uploads/' })
 
 let router = express.Router();
 
-router.use(bodyParser.urlencoded({ extended: false }))
-router.use(bodyParser.json())
+//router.use(bodyParser.urlencoded({ extended: false }))
+//router.use(bodyParser.json())
 
-router.post('.hodingcell/hodingcell', upload.none(), function (req, res, next) {
-  // req.body contains the text fields
+router.post('/uploadimage', upload.single('file'),function (req, res, next) {
+  const pictures =   database.addImage(req.file);
+  console.log(req.file);
+  res.json({});
 })
 
 

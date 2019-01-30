@@ -2,11 +2,13 @@
 <body>
   <script src="main.js"></script>
   Scriiling Text
-<section>
+<form  action="">
       <textarea  id="scroll" rows="4" cols="50"></textarea>
-</section>
+      <input type="submit">
+</form>
 Upload File
-<section>
-    <textarea  id="scroll" rows="4" cols="50"></textarea>
-</section>
+<form action="/backend/v2/uploadimage" method="post" enctype="multipart/form-data">
+  <input type="file" id="file" name="file" accept="image/png, image/jpeg">
+  <input type="submit">
+</form>
 </body>
