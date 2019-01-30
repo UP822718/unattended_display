@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 const rename = promisify(fs.rename);
-let nextId = 7;
+let nextId = 6;
 contentList.push({"id":"6","url":"/content/The-Last-Jedi-Changes.jpeg","type":"image"});
 contentList.push({"id":"5","url":"/content/star-wars-movie-posters.jpg","type":"image"});
 contentList.push({"id":"4","url":"/content/270px-13amp_fullshot.png","type":"image"});
@@ -37,7 +37,11 @@ function getContentV2() {
 
 
 async function addImage(reqFile) {
-  await rename(reqFile.path,"./static/content/"+reqFile.filename+".png")
+  await rename(reqFile.path,"./static/content/"+reqFile.filename+".png");
+  nextId += 1;
+  let con = {"id":nextId,"url":"./static/content/"+reqFile.filename+".png","type":"image"};
+  contentList.push(item);
+  console.log(contentList);
 }
 
 function addVideo(url) {
