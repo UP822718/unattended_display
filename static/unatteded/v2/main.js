@@ -43,6 +43,8 @@ async function reqListener() {
         let video = document.createElement("video");
         video.src = content.url;
         video.controls = true;
+        video.muted = true;
+        video.autoplay= true;
         video.id = content.id;
         video.addEventListener("ended", next, true);
         video.style.visibility = "hidden";

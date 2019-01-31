@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <body>
   <script src="main.js"></script>
-  Scriiling Text
-<form  action="">
-      <textarea  id="scroll" rows="4" cols="50"></textarea>
+
+<section name="mainGrid">
+  <section name="settext">
+    <h2>Scriiling Text</h2>
+    <form  action="">
+        <textarea  id="scroll" rows="4" cols="50"></textarea>
+        <input type="submit">
+      </form>
+    </section>
+<section name="fileUpload">
+  <h2>Upload File</h1>
+    <form action="/backend/v2/uploadimage" method="post" enctype="multipart/form-data">
+      <input type="file" id="file" name="file" accept="image/png, image/jpeg">
       <input type="submit">
-</form>
-Upload File
-<form action="/backend/v2/uploadimage" method="post" enctype="multipart/form-data">
-  <input type="file" id="file" name="file" accept="image/png, image/jpeg">
-  <input type="submit">
-</form>
+    </form>
+  </section>
+</section>
 </body>

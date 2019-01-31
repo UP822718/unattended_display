@@ -1,0 +1,18 @@
+#fileUpload{
+
+    grid-area: upload;
+}
+#settext{
+
+    grid-area: setText;
+    background-color: green;
+}
+
+#mainGrid{
+
+    display: grid;
+    grid-template-areas:
+        "setText"
+        "upload";
+        width:  100%
+}
