@@ -8,6 +8,7 @@ function AddOne() {
 }
 //SelfUpdate
 //S
+reqListener();
 setInterval(reqListener, 30000);
 async function reqListener() {
 
@@ -60,12 +61,6 @@ async function reqListener() {
     next();
   }
 }
-
-
-function extHangle(){
-next();
-}
-
 
 
 function next() {
