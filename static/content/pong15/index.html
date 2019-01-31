@@ -1,0 +1,23 @@
+<!doctype html>
+<title>pong</title>
+<link rel="stylesheet" href="style.css">
+
+<svg id=pongtable width="1600" height="900" viewbox="0 0 1600 900">
+    <rect id="lbat" width="50" height="300" x="0" y="300"></rect>
+    <rect id="rbat" width="50" height="300" x="1550" y="300"></rect>
+    <circle id="b2" r="20" cx="500" cy="300"></circle>
+    <g id="scores">
+        <text id="p1" x=700 y=100>0</text>
+        <text id="p2" x=900 y=100>0</text>
+    </g>
+
+</svg>
+
+<script src="class/thing.js"></script>
+<script src="class/ball.js"></script>
+<script src="class/bat.js"></script>
+<script src="lib/scoreManager.js"></script>
+<script src="lib/batManager.js"></script>
+<script src="lib/collisionManager.js"></script>
+<script src="lib/gameManager.js"></script>
+<script src="lib/audioManager.js"></script>
