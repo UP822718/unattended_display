@@ -44,7 +44,7 @@ async function reqListener() {
         video.src = content.url;
         video.controls = true;
         video.id = content.id;
-        video.addEventListener("ended", extHangle, true);
+        video.addEventListener("ended", next, true);
         video.style.visibility = "hidden";
         element.appendChild(video);
         break;
@@ -70,9 +70,11 @@ AddOne();
     if (count % docs.children.length == i) {
       docs.children[i].style.visibility = "visible";
       if (docs.children[i].nodeName == "VIDEO") {
-        docs.children[i].play();
+        //Not using .play becase it error if video is dont dowloaded
+        docs.children[i].autoplay = true;
+        docs.children[i].currentTime = 0;
       } else {
-        setTimeout(extHangle, 2000)
+        setTimeout(next, 2000)
       }
     } else {
       docs.children[i].style.visibility = "hidden";

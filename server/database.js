@@ -8,7 +8,7 @@ contentList.push({"id":"6","url":"/content/The-Last-Jedi-Changes.jpeg","type":"i
 contentList.push({"id":"5","url":"/content/star-wars-movie-posters.jpg","type":"image"});
 contentList.push({"id":"4","url":"/content/270px-13amp_fullshot.png","type":"image"});
 //contentList.push({"id":"3","url":"/content/tears-of-steel_teaser.mp4","type":"video"});
-//contentList.push({"id":"2","url":"/content/Agent 327 Operation Barbershop.mp4","type":"video"});
+contentList.push({"id":"2","url":"/content/Agent 327 Operation Barbershop.mp4","type":"video"});
 contentList.push({"id":"1","url":"/content/5c475ca9b499e000011032d6-image_8bfea5dc.jpeg","type":"image"});
 
 let text = `Hn a time warp. Keep pressing it. Maybe you'll break free. What's that. The little counter at the bottom keeps going up? Never mind. That's just how many times you have to click before you can leave. Good-bye.`;
