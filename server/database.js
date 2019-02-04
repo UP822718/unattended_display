@@ -35,19 +35,12 @@ function getContentV2() {
 
 
 
-<<<<<<< HEAD
-async function addImage(reqFile) {
-  await rename(reqFile.path,"./static/content/"+reqFile.filename+".png");
-  nextId += 1;
-  let con = {"id":nextId,"url":"./static/content/"+reqFile.filename+".png","type":"image"};
-  contentList.push(con);
-=======
+
 function addImage(reqFile) {
     fs.rename(reqFile.path,"./static/content/"+reqFile.filename+".png");
    nextId += 1;
    let con = {"id":nextId,"url":"./static/content/"+reqFile.filename+".png","type":"image"};
    contentList.push(item);
->>>>>>> c51dc83c571d82e1cfdbd77c8e89c20b5e89cb42
   console.log(contentList);
 }
 
