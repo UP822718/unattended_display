@@ -30,8 +30,8 @@ router.post('/text', function (req, res) {
 module.exports = router
 
 
-async function uploadPicture(req, res) {
-    const retval = await database.uploadPicture(req.file);
+function uploadPicture(req, res) {
+    const retval =  database.uploadPicture(req.file);
     res.json(retval);
 }
 

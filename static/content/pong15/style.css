@@ -1,0 +1,19 @@
+svg {
+    width: 100%;
+    height: 100%;
+    border: red solid thin;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#scores {
+    font-size: 800%;
+    opacity: 0.3;
+}
+
+#p2 {
+    text-anchor: end;
+}

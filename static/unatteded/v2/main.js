@@ -8,6 +8,7 @@ function AddOne() {
 }
 //SelfUpdate
 //S
+reqListener();
 setInterval(reqListener, 30000);
 async function reqListener() {
 
@@ -42,8 +43,10 @@ async function reqListener() {
         let video = document.createElement("video");
         video.src = content.url;
         video.controls = true;
+        video.muted = true;
+        video.autoplay= true;
         video.id = content.id;
-        video.addEventListener("ended", extHangle, true);
+        video.addEventListener("ended", next, true);
         video.style.visibility = "hidden";
         element.appendChild(video);
         break;
@@ -62,12 +65,6 @@ async function reqListener() {
 }
 
 
-function extHangle(){
-next();
-}
-
-
-
 function next() {
 AddOne();
   let docs = document.getElementsByClassName("content")[0];
@@ -75,9 +72,11 @@ AddOne();
     if (count % docs.children.length == i) {
       docs.children[i].style.visibility = "visible";
       if (docs.children[i].nodeName == "VIDEO") {
-        docs.children[i].play();
+        //Not using .play becase it error if video is dont dowloaded
+        docs.children[i].autoplay = true;
+        docs.children[i].currentTime = 0;
       } else {
-        setTimeout(extHangle, 2000)
+        setTimeout(next, 2000)
       }
     } else {
       docs.children[i].style.visibility = "hidden";
