@@ -1,6 +1,5 @@
 const express  = require('express');
-const database  = require('../database.js');
-const config = require("../config");
+const database  = require('../database_MYSQL.js');
 let bodyParser = require('body-parser')
 let multer  = require('multer')
 let upload = multer({ dest: 'uploads/' })
@@ -17,10 +16,7 @@ router.post('/uploadimage', upload.single('file'),function (req, res, next) {
   console.log(req.file);
   res.json({});
 })
-router.get('/login', function (req, res){
-      authentication.loginGoogle();
-      res.json({});
-  });
+
 
 router.get('/getContent', function (req, res) {
   res.json({"content":database.getContentV2(),"text":database.getText()});

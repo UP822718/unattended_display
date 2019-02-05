@@ -1,0 +1,9 @@
+{
+  "google":{
+  "id":"974090017649-324933ehmsbadsjosv338jpmplfau1b8.apps.googleusercontent.com"
+},
+  "sql":{
+    "host":"localhost",
+    "database": "unattended"
+  }
+}

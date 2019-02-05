@@ -1,0 +1,23 @@
+#topbar{
+
+    grid-area: topbar;
+}
+#fileUpload{
+
+    grid-area: upload;
+}
+#settext{
+
+    grid-area: setText;
+    background-color: green;
+}
+
+#mainGrid{
+
+    display: grid;
+    grid-template-areas:
+        "topbar"
+        "setText"
+        "upload";
+        width:  100%
+}
