@@ -1,5 +1,5 @@
 const express  = require('express');
-const database  = require('../database_MYSQL.js');
+const database  = require('../database.js');
 let bodyParser = require('body-parser')
 let multer  = require('multer')
 let upload = multer({ dest: 'uploads/' })

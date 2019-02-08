@@ -27,7 +27,7 @@ function getContentV1() {
   return l;
 }
 
-function addImage(reqFile) {
+async function addImage(reqFile) {
     fs.rename(reqFile.path,"./static/content/"+reqFile.filename+".png");
    await connection.execute(`INSERT INTO Customers (url, type)VALUES (?,?,?)`, [url, "video"]);
    let con = {"id":nextId,"url":"./static/content/"+reqFile.filename+".png","type":"image"};
